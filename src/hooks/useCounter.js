@@ -18,7 +18,7 @@ function reducer(state, action) {
         count: +action.value <= state.max ? +action.value : state.count,
       };
     default:
-      throw new Error('Invalid action dispatched');
+      return state;
   }
 }
 

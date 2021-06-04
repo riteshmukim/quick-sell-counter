@@ -24,15 +24,13 @@ const Button = ({
     cursor: disabled ? "auto" : "pointer",
     borderWidth,
     borderStyle,
-    borderColor: `var(--${colors[borderColor] || "primary"}-color)`,
-    color: `var(--${colors[color] || "primary"}-color)`,
-    backgroundColor: `var(--${colors[backgroundColor] || "tertiary"}-color)`,
+    borderColor: `var(--${colors[borderColor]}-color)`,
+    color: `var(--${colors[color]}-color)`,
+    backgroundColor: `var(--${colors[backgroundColor]}-color)`,
   };
 
-  const handleOnClick = disabled ? () => {} : onClick;
-
   return (
-    <button style={buttonStyles} onClick={handleOnClick} disabled={disabled}>
+    <button style={buttonStyles} onClick={onClick} disabled={disabled}>
       {label}
     </button>
   );
