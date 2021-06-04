@@ -1,0 +1,29 @@
+:root {
+  --primary-color: #b24242;
+  --secondary-color: #fbe8e8;
+  --tertiary-color: #ffffff;
+  --background-color: #f9f9f9;
+  --shadow-color: #cccccc;
+}
+
+* {
+  font-size: 21px;
+  font-weight: 900;
+  color: var(--primary-color);
+}
+
+.App {
+  background-color: var(--background-color);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.wrapper {
+  padding: 40px;
+  background-color: var(--tertiary-color);
+  box-shadow: 0 0 8px -2px var(--shadow-color);
+}
