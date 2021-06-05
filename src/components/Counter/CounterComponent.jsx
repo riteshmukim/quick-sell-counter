@@ -8,7 +8,7 @@ const CounterComponent = ({
   max = 1000,
   handleDecrement = () => {},
   handleIncrement = () => {},
-  handleAbsolute = () => {},
+  onChange = () => {},
 }) => (
   <div className="counter">
     <Button
@@ -27,7 +27,7 @@ const CounterComponent = ({
       aria-label="Count"
       value={value}
       max={max}
-      onChange={handleAbsolute}
+      onChange={onChange}
     />
     <Button
       label="+"
@@ -48,7 +48,7 @@ CounterComponent.propTypes = {
   max: number,
   handleDecrement: func,
   handleIncrement: func,
-  handleAbsolute: func,
+  onChange: func,
 };
 
 export default CounterComponent;
