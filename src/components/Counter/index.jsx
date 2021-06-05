@@ -8,8 +8,7 @@ const Counter = ({ initialValue = 1, max = 1000 }) => {
 
   const handleIncrement = () => dispatch({ type: "increment" });
   const handleDecrement = () => dispatch({ type: "decrement" });
-  const handleAbsolute = e =>
-    dispatch({ type: "absolute", value: e.target.value });
+  const onChange = e => dispatch({ type: "absolute", value: e.target.value });
 
   return (
     <CounterComponent
@@ -17,7 +16,7 @@ const Counter = ({ initialValue = 1, max = 1000 }) => {
       max={state.max}
       handleDecrement={handleDecrement}
       handleIncrement={handleIncrement}
-      handleAbsolute={handleAbsolute}
+      onChange={onChange}
     />
   );
 };
