@@ -1,19 +1,18 @@
 import { number } from "prop-types";
 
-import useCounter from "../../hooks/useCounter";
 import CounterComponent from "./CounterComponent";
 
-const Counter = ({ initialValue = 1, max = 1000 }) => {
-  const [state, dispatch] = useCounter({ count: initialValue, max });
-
-  const handleIncrement = () => dispatch({ type: "increment" });
-  const handleDecrement = () => dispatch({ type: "decrement" });
-  const onChange = e => dispatch({ type: "absolute", value: e.target.value });
-
+const Counter = ({
+  count = 1,
+  max = 1000,
+  handleDecrement = () => {},
+  handleIncrement = () => {},
+  onChange = () => {},
+}) => {
   return (
     <CounterComponent
-      value={state.count}
-      max={state.max}
+      value={count}
+      max={max}
       handleDecrement={handleDecrement}
       handleIncrement={handleIncrement}
       onChange={onChange}
